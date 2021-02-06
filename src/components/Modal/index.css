@@ -1,0 +1,155 @@
+
+.modalBg {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.modalBg.modalFullscreen {
+    backdrop-filter: blur(10px);
+}
+
+.modalWrapper {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 5px;
+    min-width: 460px;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modalFullscreen .modalWrapper {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    position: relative;
+}
+
+.modalWrapper p {
+    margin: 10px 0;
+}
+
+.modalClose:after {
+    content: '×';
+    font-size: 24px;
+    color: #ccc;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 12px;
+}
+
+.modalTitle {
+    color: #333447;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.modalFullscreen .modalTitle {
+    color: white;
+    font-size: 22px;
+}
+
+.modalBody {
+    color: #1c1c1c;
+    font-size: 14px;
+}
+
+.modalFullscreen .modalBody {
+    color: #f3f3f3;
+    font-size: 14px !important;
+}
+
+.modalBody img {
+    border-radius: 5px;
+    margin: 15px auto;
+    max-height: 500px;
+    max-width: 250px;
+    min-width: 200px;
+}
+
+.modalBody div {
+    text-align: center;
+}
+
+.modalBtnWrapper {
+    margin-top: 15px;
+}
+
+.modalBtn {
+    border: solid 1px #ddd;
+    border-radius: 4px;
+    padding: 7px 15px 10px;
+    background: transparent;
+    outline: none;
+    text-decoration: none !important;
+    font-size: 13px;
+    color: #212121;
+    transition: all .15s;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.modalFullscreen .modalBtn {
+    border: solid 1px #ddd;
+    color: #eee;
+}
+
+.modalBtn:hover {
+    background-color: #333447;
+    border-color: #333447;
+    color: #ffe58a;
+}
+
+.modalFullscreen .modalBtn:hover {
+    background-color: #ffe58a;
+    border-color: #ffe58a;
+    color: #333447;
+}
+
+.modalBtn.active {
+    border: solid 1px #ffe58a;
+    background: #ffe58a;
+    color: #1c1c1c;
+}
+
+.modalFullscreen .modalBtn.active {
+    border: solid 1px #ffe58a;
+    background: transparent;
+    color: #ffe58a;
+}
+
+.modalBtn.active:hover {
+    border: solid 1px #ffd217;
+    background: #ffd217;
+}
+
+.modalFullscreen .modalBtn.active:hover {
+    border: solid 1px #ffe58a;
+    background: #ffe58a;
+    color: #333447;
+}
+
+.modalActionCounter {
+    font-size: 200px;
+    color: #ffe58a;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    display: block;
+    text-align: center;
+    font-weight: 100;
+    margin: 0 auto;
+}
+
+.noBorder {
+    border: none !important;
+}

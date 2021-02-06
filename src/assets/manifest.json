@@ -1,0 +1,9 @@
+{
+  "name": "Pod Data Labeling",
+  "short_name": "Pobble",
+  "background_color": "#3E82F7",
+  "orientation": "portrait",
+  "theme_color": "#1e88e5",
+  "display": "standalone",
+  "start_url": "/"
+}

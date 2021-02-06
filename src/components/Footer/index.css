@@ -1,0 +1,51 @@
+.footer {
+	font-weight: 500;
+	background: #212121;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-family: var(--font-code);
+	color: rgba(255, 255, 255, 0.65);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 48px;
+	direction: ltr;
+}
+
+.footer span {
+	color: #949499;
+}
+
+.footer span a {
+	color: #949499;
+	transition: color var(--transition-duration);
+}
+
+.footer a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.heart {
+	width: 40px;
+	height: 40px;
+	background: transparent url(~@assets/twitter_heart.png) no-repeat;
+	background-size: 2900%;
+	margin: 0px -8px 0;
+}
+
+.heart:hover {
+	background-position: right;
+	animation: moveHeart 800ms steps(28) forwards;
+}
+
+@keyframes moveHeart {
+	0% {
+		background-position: left;
+	}
+	50% {
+		background-position: right;
+	}
+	100% {
+		background-position: right;
+	}
+}

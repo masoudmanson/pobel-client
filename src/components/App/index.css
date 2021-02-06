@@ -1,0 +1,20 @@
+.app {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.wrapper {
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	flex: 1 0 auto;
+}
+
+@media screen and (max-width: 769px) {
+	.wrapper {
+		/*width: 90%;*/
+	}
+}

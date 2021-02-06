@@ -1,0 +1,15 @@
+.datasets-wrapper {
+    padding: 50px 0;
+}
+
+.dataset-list-name:before {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 12px;
+    width: 3px;
+    height: 3px;
+    background-color: #666;
+    border-radius: 3px;
+    box-shadow: 8px 0px 0 0px #666, 0px 10px 0 0px #666, 8px 10px 0 0px #666, 0px 20px 0 0px #666, 8px 20px 0 0px #666, 0px 30px 0 0px #666, 8px 30px 0 0px #666, 0px 40px 0 0px #666, 8px 40px 0 0px #666;
+}

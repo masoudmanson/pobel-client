@@ -1,0 +1,125 @@
+.hero {
+	position: relative;
+	background: #f3f3f3;
+	/*background: #580041;*/
+	/*background: -webkit-linear-gradient(to right, #580041, #6e0034);*/
+	/*background: linear-gradient(to right, #580041, #6e0034);*/
+	/*border-bottom: 2px solid #331521;*/
+	max-height: 600px;
+	min-height: 300px;
+	height: 30vh;
+	overflow: hidden;
+	user-select: none;
+}
+
+.hero:before {
+	content: '';
+	height: 900px;
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	background: url(~@assets/images/techworld.png) no-repeat center center;
+	background-size: 750px;
+	top: -150px;
+	animation: rotateBg 90s linear infinite;
+	opacity: 0.5;
+}
+
+/*.hero:after {*/
+/*	content: '';*/
+/*	height: 900px;*/
+/*	width: 100%;*/
+/*	z-index: 1;*/
+/*	position: absolute;*/
+/*	background: url(~@assets/images/techworld.png) no-repeat center center;*/
+/*	background-size: 500px;*/
+/*	top: -450px;*/
+/*	left: -790px;*/
+/*	animation: rotateBg 120s linear infinite;*/
+/*	opacity: 0.5;*/
+/*}*/
+
+@keyframes rotateBg {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.shapes {
+	width: 100%;
+	position: absolute;
+	transform: translateZ(0);
+	overflow: hidden;
+	bottom: 0;
+	top: 0;
+}
+
+.titles {
+	height: 0;
+	z-index: 2;
+	position: relative;
+	font-family: 'Ubuntu', 'IranSans', inherit;
+	text-transform: uppercase;
+	top: 7vh;
+	text-align: center;
+	color: white;
+}
+
+.titles h1 {
+	font-size: 3em;
+	font-weight: 800;
+	line-height: 1;
+	background: #580041;
+	background: -webkit-linear-gradient(to right, #580041, #6e0034);
+	background: linear-gradient(to right, #580041, #6e0034);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 10px;
+}
+
+.titles h3 {
+	line-height: 2;
+	font-weight: 100;
+	letter-spacing: 5px;
+	font-size: 1em;
+	color: #ff257c;
+}
+
+.shape {
+	--size: 30px;
+	position: absolute;
+	will-change: transform;
+	background: transparent no-repeat center;
+	background-size: contain;
+	height: var(--size);
+	width: var(--size);
+}
+
+:global(.penta) {
+	background-image: url(~@assets/shapes/penta.svg);
+}
+
+:global(.point) {
+	background-image: url(~@assets/shapes/point.svg);
+}
+
+:global(.square) {
+	background-image: url(~@assets/shapes/square.svg);
+}
+
+:global(.cross) {
+	background-image: url(~@assets/shapes/cross.svg);
+}
+
+:global(.circle) {
+	background-image: url(~@assets/shapes/circle.svg);
+}
+
+@media screen and (max-width: 421px) {
+	.shape {
+		--size: 20px;
+	}
+}
